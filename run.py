@@ -50,9 +50,9 @@ async def roll(ctx, *stuff):
 
             roll = random.randint(1, dice)
             if mod == 0:
-                await client.say("{} rolled a **{}**!".format(ctx.message.author.mention, str(roll)))
+                await client.say("{} rolled **{}**!".format(ctx.message.author.mention, str(roll)))
             else:
-                await client.say("{} rolled a **{}** (+ {}) -> **{}**!".format(ctx.message.author.mention, str(roll), str(mod), str(roll + mod)))
+                await client.say("{} rolled **{}** ({} + {})!".format(ctx.message.author.mention, str(roll + mod), str(roll), str(mod)))
         elif "d" in text:
             tokens = text.split("d")
 
